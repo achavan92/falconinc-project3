@@ -27,18 +27,15 @@ public class SearchEngine {
         txtbx.setBounds(75, 150, 260, 40);
         
         // radio button for all searched terms
-	JRadioButton allSrch = new JRadioButton();
-        allSrch.setText("All Searhed terms");
+	JRadioButton allSrch = new JRadioButton("All Searhed terms");       
 	allSrch.setBounds(40, 190, 140, 40);
         
         // radio button for any of the searched terms
-	JRadioButton anySrch = new JRadioButton();
-        anySrch.setText("Any Searched terms");
+	JRadioButton anySrch = new JRadioButton("Any Searched terms");
 	anySrch.setBounds(190, 190, 170, 40);
         
         // radio button for exact phrases
-	JRadioButton exctPhrse = new JRadioButton();
-        exctPhrse.setText("Exact Phrase");
+	JRadioButton exctPhrse = new JRadioButton("Exact Phrase");
 	exctPhrse.setBounds(360, 190, 325, 40);
         
         // allows only one radio button to be sellected at a time
@@ -62,6 +59,10 @@ public class SearchEngine {
         // button to connect to the Admin window
         JButton adminbtn = new JButton("Manage Files");
         adminbtn.setBounds(10, 500, 150, 40);
+        
+        // about button to display info about app
+        JButton abtbtn = new JButton("About");
+        abtbtn.setBounds(490, 500, 80, 40);
 
 		
         // adding text, textbox, buttons, exc to frame
@@ -72,6 +73,7 @@ public class SearchEngine {
         frame.add(anySrch);
         frame.add(exctPhrse);
         frame.add(adminbtn);
+        frame.add(abtbtn);
 
 		
 	frame.setLayout(null);
