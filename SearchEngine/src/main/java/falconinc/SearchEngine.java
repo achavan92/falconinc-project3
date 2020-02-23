@@ -48,7 +48,6 @@ public class SearchEngine {
         /* action listener added to check which
          * radio buttons were select.
          */
-        // Under Construction!!
         srchBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(allSrch.isSelected()){
