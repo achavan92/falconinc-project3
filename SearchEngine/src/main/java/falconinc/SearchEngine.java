@@ -84,6 +84,13 @@ public class SearchEngine {
         JButton adminbtn = new JButton("Manage Files");
         adminbtn.setBounds(10, 500, 150, 40);
         
+        // action listener added to admin button
+        adminbtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "COMING SOON!");// temporary message
+            }
+        });
+        
         // about button to display info about app
         JButton abtbtn = new JButton("About");
         abtbtn.setBounds(490, 500, 80, 40);
