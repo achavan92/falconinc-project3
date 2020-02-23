@@ -1,8 +1,7 @@
 package falconinc;
 import javax.swing.*;
 import java.awt.*; 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 
 
 /**
@@ -21,8 +20,8 @@ public class SearchEngine {
 	frame.setSize(600,600);
         
         // add search button
-	JButton btn = new JButton("Search");
-        btn.setBounds(340, 150, 100, 40);
+	JButton srchBtn = new JButton("Search");
+        srchBtn.setBounds(340, 150, 100, 40);
         
         // add search textbox
 	JTextField txtbx = new JTextField();
@@ -45,7 +44,31 @@ public class SearchEngine {
         bg.add(allSrch);
         bg.add(anySrch);
         bg.add(exctPhrse);
-
+        
+        /* action listener added to check which
+         * radio buttons were select.
+         */
+        // Under Construction!!
+        srchBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(allSrch.isSelected()){
+                    JOptionPane.showMessageDialog(null,
+                            "All Searched Terms button was selected.");
+                }
+                else if(anySrch.isSelected()) {
+                    JOptionPane.showMessageDialog(null, 
+                            "Any Searched Terms button was selected.");
+                }
+                else if(exctPhrse.isSelected()) {
+                    JOptionPane.showMessageDialog(null, 
+                            "Exact Phrase button was selected.");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, 
+                            "No buttons were selected.");
+                }
+            }
+        });
 
         // font for title
 	Font font = new Font("Monospace", Font.ITALIC, 36); 
@@ -66,8 +89,7 @@ public class SearchEngine {
         JButton abtbtn = new JButton("About");
         abtbtn.setBounds(490, 500, 80, 40);
         
-        /* 
-         * add pop up window displaying info on app
+        /* add pop up window displaying info on app
          * when about button is clicked.
          */ 
         abtbtn.addActionListener(new ActionListener() {
@@ -81,7 +103,7 @@ public class SearchEngine {
         // adding text, textbox, buttons, exc to frame
         frame.add(title);
 	frame.add(txtbx);
-	frame.add(btn);
+	frame.add(srchBtn);
         frame.add(allSrch);
         frame.add(anySrch);
         frame.add(exctPhrse);
