@@ -73,7 +73,7 @@ public class SearchEngine {
         abtbtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, "Project 3 Search Engine UI" +
-                        "\nWritten by: Robert (Alex) Spangler \nPlant City, FL,");
+                        "\nWritten by: Robert (Alex) Spangler \nPlant City, FL");
             }
         });
 
