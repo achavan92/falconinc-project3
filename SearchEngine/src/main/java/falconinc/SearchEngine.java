@@ -1,6 +1,8 @@
 package falconinc;
 import javax.swing.*;
 import java.awt.*; 
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 /**
@@ -63,6 +65,17 @@ public class SearchEngine {
         // about button to display info about app
         JButton abtbtn = new JButton("About");
         abtbtn.setBounds(490, 500, 80, 40);
+        
+        /* 
+         * add pop up window displaying info on app
+         * when about button is clicked.
+         */ 
+        abtbtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Project 3 Search Engine UI" +
+                        "\nWritten by: Robert (Alex) Spangler \nPlant City, FL,");
+            }
+        });
 
 		
         // adding text, textbox, buttons, exc to frame
