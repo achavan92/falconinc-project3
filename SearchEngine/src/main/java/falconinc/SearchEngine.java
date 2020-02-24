@@ -14,6 +14,7 @@ public class SearchEngine {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         // create frame
         JFrame frame = new JFrame("Falcon Search");
 	frame.setLayout(new FlowLayout()); 
@@ -26,9 +27,15 @@ public class SearchEngine {
         // add search textbox
 	JTextField txtbx = new JTextField();
         txtbx.setBounds(75, 150, 260, 40);
+        
+       /* 
+        * TODO: figure out how to disable and enable search button
+        * based on whether or not the textbox is filled.
+        */
+       
                 
         // radio button for all searched terms
-	JRadioButton allSrch = new JRadioButton("All Searhed terms");       
+	JRadioButton allSrch = new JRadioButton("All Searched terms");       
 	allSrch.setBounds(40, 190, 140, 40);
         
         // radio button for any of the searched terms
