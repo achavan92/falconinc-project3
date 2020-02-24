@@ -14,8 +14,13 @@ public class SearchEngine {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SearchEngine myUI = new SearchEngine();
-       
+        
+        try{
+        SearchEngine srchUI = new SearchEngine();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
     
     // create object for UI
