@@ -14,8 +14,18 @@ public class SearchEngine {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        // create frame
+        SearchEngine myUI = new SearchEngine();
+       
+    }
+    
+    // create object for UI
+    public SearchEngine() {
+        CreateUI();
+    }
+
+    // method to create UI
+    private void CreateUI(){
+         // create frame
         JFrame frame = new JFrame("Falcon Search");
 	frame.setLayout(new FlowLayout()); 
 	frame.setSize(600,600);
