@@ -26,7 +26,7 @@ public class SearchEngine {
         // add search textbox
 	JTextField txtbx = new JTextField();
         txtbx.setBounds(75, 150, 260, 40);
-        
+                
         // radio button for all searched terms
 	JRadioButton allSrch = new JRadioButton("All Searhed terms");       
 	allSrch.setBounds(40, 190, 140, 40);
@@ -46,25 +46,26 @@ public class SearchEngine {
         bg.add(exctPhrse);
         
         /* action listener added to check which
-         * radio buttons were select.
+         * radio buttons were select and displaying 
+         * the text in the textbox.
          */
         srchBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(allSrch.isSelected()){
                     JOptionPane.showMessageDialog(null,
-                            "All Searched Terms button was selected.");
+                            "All Searched Terms for " + txtbx.getText() +" was selected.");
                 }
                 else if(anySrch.isSelected()) {
                     JOptionPane.showMessageDialog(null, 
-                            "Any Searched Terms button was selected.");
+                            "Any Searched Terms for " + txtbx.getText() +" was selected.");
                 }
                 else if(exctPhrse.isSelected()) {
                     JOptionPane.showMessageDialog(null, 
-                            "Exact Phrase button was selected.");
+                            "Exact Phrase of " + txtbx.getText() +" selected.");
                 }
                 else {
                     JOptionPane.showMessageDialog(null, 
-                            "No buttons were selected.");
+                            "No buttons were selected for " + txtbx.getText() + ".");
                 }
             }
         });
