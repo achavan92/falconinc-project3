@@ -25,11 +25,11 @@ public class SearchEngine {
     
     // create object for UI
     public SearchEngine() {
-        CreateHomePage();
+        homePage();
     }
 
     // method to create UI homepage
-    private void CreateHomePage(){
+    private void homePage(){
          // create frame
         JFrame frame = new JFrame("Falcon Search");
 	frame.setLayout(new FlowLayout()); 
@@ -149,6 +149,41 @@ public class SearchEngine {
     
     // method for admin page.
     private void createAdminPage(){
-        JOptionPane.showMessageDialog(null, "COMING SOON!");// temporary message
+
+        // create frame to create frame for admin page
+        JFrame frame = new JFrame("Falcon Search - Admin");
+	frame.setLayout(new FlowLayout()); 
+	frame.setSize(600,600);
+        
+        // font for title
+	Font font = new Font("Monospace", Font.ITALIC, 36); 
+
+	// title
+	JLabel title = new JLabel();		
+	title.setText("Under Construction");// change name when finished
+	title.setBounds(120, 100, 320, 40);	    
+	title.setHorizontalAlignment(JLabel.CENTER);
+	title.setVerticalAlignment(JLabel.CENTER);
+	title.setFont(font);
+        
+         // about button to display info about app
+        JButton homeBtn = new JButton("Home");
+        homeBtn.setBounds(490, 20, 80, 40);
+        
+       // button to return to homepage
+        homeBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                homePage();
+            }
+        });
+        
+        frame.add(title);
+        frame.add(homeBtn);
+        
+        frame.setLayout(null);
+	frame.setVisible(true);
+        
+        // Closes window
+	frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }
