@@ -28,7 +28,7 @@ public class SearchEngine {
         CreateHomePage();
     }
 
-    // method to create UI home page
+    // method to create UI homepage
     private void CreateHomePage(){
          // create frame
         JFrame frame = new JFrame("Falcon Search");
