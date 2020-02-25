@@ -166,14 +166,7 @@ public class SearchEngine {
 	title.setVerticalAlignment(JLabel.CENTER);
 	title.setFont(font);
         
-        // lets user know the page is under construction
-	JLabel announcement = new JLabel();		
-	announcement.setText("COMING SOON!");
-	announcement.setBounds(120, 160, 320, 40);	    
-	announcement.setHorizontalAlignment(JLabel.CENTER);
-	announcement.setVerticalAlignment(JLabel.CENTER);
-	announcement.setFont(font);
-        
+       
         
          // about button to display info about app
         JButton homeBtn = new JButton("Home");
@@ -186,9 +179,21 @@ public class SearchEngine {
             }
         });
         
+        // Code for table below
+        // still working out the bugs
+        //-----------test code-----------
+        String column[]={"File","Status"}; // top column not visible
+        String data[][]={ {"hello.txt","available"},    
+                          {"foo.txt","available"},    
+                          {"bar.txt","available"}};    
+                 
+        JTable fileTbl=new JTable(data,column);    
+        fileTbl.setBounds(120,160,320,300);
+ 
+        //---------------------------------
         frame.add(title);
-        frame.add(announcement);
         frame.add(homeBtn);
+        frame.add(fileTbl);
         
         frame.setLayout(null);
 	frame.setVisible(true);
