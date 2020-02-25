@@ -156,15 +156,24 @@ public class SearchEngine {
 	frame.setSize(600,600);
         
         // font for title
-	Font font = new Font("Monospace", Font.ITALIC, 36); 
+	Font font = new Font("Monospace", Font.ITALIC, 30); 
 
 	// title
 	JLabel title = new JLabel();		
-	title.setText("Under Construction");// change name when finished
+	title.setText("Admin page");// change name when finished
 	title.setBounds(120, 100, 320, 40);	    
 	title.setHorizontalAlignment(JLabel.CENTER);
 	title.setVerticalAlignment(JLabel.CENTER);
 	title.setFont(font);
+        
+        // lets user know the page is under construction
+	JLabel announcement = new JLabel();		
+	announcement.setText("COMING SOON!");
+	announcement.setBounds(120, 160, 320, 40);	    
+	announcement.setHorizontalAlignment(JLabel.CENTER);
+	announcement.setVerticalAlignment(JLabel.CENTER);
+	announcement.setFont(font);
+        
         
          // about button to display info about app
         JButton homeBtn = new JButton("Home");
@@ -173,11 +182,12 @@ public class SearchEngine {
        // button to return to homepage
         homeBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                homePage();
+                homePage(); 
             }
         });
         
         frame.add(title);
+        frame.add(announcement);
         frame.add(homeBtn);
         
         frame.setLayout(null);
