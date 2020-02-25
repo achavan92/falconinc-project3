@@ -25,11 +25,11 @@ public class SearchEngine {
     
     // create object for UI
     public SearchEngine() {
-        CreateUI();
+        CreateHomePage();
     }
 
-    // method to create UI
-    private void CreateUI(){
+    // method to create UI home page
+    private void CreateHomePage(){
          // create frame
         JFrame frame = new JFrame("Falcon Search");
 	frame.setLayout(new FlowLayout()); 
@@ -110,7 +110,7 @@ public class SearchEngine {
         // action listener added to admin button
         adminbtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "COMING SOON!");// temporary message
+                createAdminPage();
             }
         });
         
@@ -147,4 +147,8 @@ public class SearchEngine {
 	frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
     
+    // method for admin page.
+    private void createAdminPage(){
+        JOptionPane.showMessageDialog(null, "COMING SOON!");// temporary message
+    }
 }
