@@ -179,26 +179,29 @@ public class SearchEngine {
             }
         });
         
-        // Code for table below
-        // still working out the bugs
-        //-----------test code-----------
+        
+        // Code for table below     
         String column[]={"File","Status"}; // top column not visible
         String data[][]={ {"hello.txt","available"},    
                           {"foo.txt","available"},    
                           {"bar.txt","available"}};    
                  
-        JTable fileTbl=new JTable(data,column);    
-        fileTbl.setBounds(120,160,320,300);
- 
-        //---------------------------------
+        JTable fileTbl=new JTable(data,column); 
+        fileTbl.setBounds(1,160,600,300);
+
+        JScrollPane sP = new JScrollPane(fileTbl, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+
+
         frame.add(title);
         frame.add(homeBtn);
-        frame.add(fileTbl);
+        frame.add(sP, BorderLayout.CENTER);
         
-        frame.setLayout(null);
+        
 	frame.setVisible(true);
         
         // Closes window
 	frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        
     }
+
 }
