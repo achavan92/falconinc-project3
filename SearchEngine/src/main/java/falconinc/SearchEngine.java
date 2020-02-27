@@ -181,7 +181,7 @@ public class SearchEngine {
         
         
         // Code for table below     
-        String column[]={"File","Status"}; // top column not visible
+        String column[]={"File","Status"}; 
         String data[][]={ {"hello.txt","available"},    
                           {"foo.txt","available"},    
                           {"bar.txt","available"}};    
@@ -195,8 +195,7 @@ public class SearchEngine {
         frame.add(title);
         frame.add(homeBtn);
         frame.add(sP, BorderLayout.CENTER);
-        
-        
+               
 	frame.setVisible(true);
         
         // Closes window
